@@ -1,0 +1,10 @@
+63870cb Меню
+8bc9b7a Выделение
+94d36c1 Появление в продаже
+b2ba8b5 Compare
+68b2598 Стили подвала
+80748aa Colors + font_size
+fb195e7 table + style body
+9ac5b49 Table with title
+d6879ab USB-дубликатор
+b59f72d Lab2 readme
