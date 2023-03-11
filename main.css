@@ -10,6 +10,14 @@ header {
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+
+}
+
+header:hover {
+    transition: 300ms 1s;
+    background: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
+    font-size: 30pt;
 }
 
 footer {
@@ -20,10 +28,18 @@ footer {
     text-align: right;
 }
 
+footer:hover {
+    transition: 300ms 1s;
+    background-color: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
+    font-size: 30pt;
+}
 a {
     color: green;
     text-decoration: none;
     target="_blank";
+    text-shadow: 5px 5px 1px gray;
+    transition: 300ms 1s;
 }
 
 a:visited {
@@ -36,6 +52,7 @@ a:hover {
     text-decoration: underline;
     background-color: blueviolet;
     font-weight: bold;
+    transition: 300ms 1s;
 }
 
 a:active {
