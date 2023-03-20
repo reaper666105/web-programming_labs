@@ -39,7 +39,7 @@ a {
     text-decoration: none;
     target="_blank";
     text-shadow: 5px 5px 1px gray;
-    transition: 300ms 1s;
+    transition: 3s 3s;
 }
 
 a:visited {
@@ -52,7 +52,7 @@ a:hover {
     text-decoration: underline;
     background-color: blueviolet;
     font-weight: bold;
-    transition: 300ms 1s;
+    transition: 0.3s 100ms;
 }
 
 a:active {
