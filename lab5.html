@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Григорови Юшков. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма '+ a + ' Сумма ' + b + ' равна ' + result);
+        }
+    </script>
+    <style>
+        .message {
+            cursor: pointer;
+            background-color: bisque;
+            width: 180px;
+            height: 40px;
+            border: 2px solid #fd0606;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <header> 
@@ -13,7 +32,13 @@
     </header>
 
     <main>
+        <div class="message" onclick="showSum()">
+            Сколько будет 5154+7891?
+        </div>
 
+        <div class="message">
+            Узнать, кто авторы страницы
+        </div>
     </main>
 
     <footer>
