@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showSum() {
-            let a = 5154;
-            let b = 7891;
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
             let result = a + b;
             alert('Сумма '+ a + ' Сумма ' + b + ' равна ' + result);
         }
@@ -32,13 +35,15 @@
     </style>
 </head>
 <body>
-    <header onclick="showAuthor()"> 
+    <header style = "cursor: pointer;" onclick="showAuthor()"> 
         НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
+        <lable>первое число: <input type="number" value="5154" id="numberA"></lable><br>
+        <lable>второе число: <input type="number" value="7891" id="numberB"></lable><br>
         <div class="message" onclick="showSum()">
-            Сколько будет 5154+7891?
+            Найти  сумму чисел
         </div>
 
         <div class="message" onclick="showAuthor()">
