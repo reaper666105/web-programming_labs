@@ -37,7 +37,6 @@
             output.innerHTML = 'Нажата кнопка ' + buttonNum;
             output.style.backgroundColor = backColor
             output.style.color = textColor;   
-
         }
 
         function showTotal() {
@@ -53,13 +52,19 @@
 
             let result = (a*100 + b*80 + c*150 + d*300);
 
-            //  alert('Итого:' + result);
-            
-            let q = document.getElementgById('output2')
+            let q = document.getElementById('output2')
             q.innerHTML =  'Итого: ' + result 
+        }
+        
+        function click(visibility) {
+            let q = document.getElementById('q');
+            q.style.visibility = visibility;
             
         }
+
+
     </script>
+
     <style>
         .message {
             cursor: pointer;
@@ -80,7 +85,7 @@
 
         #output2 {
             border: 1px solid;
-            width: 300px;
+            width: 250px;
             height: 40px;
         }
         
@@ -90,7 +95,28 @@
             width: 250px;
             height: 400px;
         }
+
+        .cicle {
+            width: 50px; 
+            height: 50px; 
+            border: 2px solid;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            
+        }
+
+        #q {
+            background-color: #fd0606;
+        }
+
     </style>
+
 </head>
 <body>
     <header style = "cursor: pointer;" onclick="showAuthor()"> 
@@ -132,10 +158,20 @@
             <div>Дыни(300р/шт)</div>
             <div><input type="number" value="0" id="numbD"></div>
             <input type="button" value="Рассчитать" onclick=showTotal() >
-            <div id='output2'> </div>
-            
-
+            <div id='output2'> Итого: </div>
         </div>
+        
+        <div class="cicle" id="q" onclick="click('collapse')"> 1 </div>
+        <div class="cicle" style="background-color: #06d8fd;" onclick="click()"> 2 </div>
+        <div class="cicle" style="background-color: #06fd75;" onclick="click()"> 3 </div>
+        <div class="cicle" style="background-color: #fd06f1;" onclick="click()"> 4 </div>
+        <div class="cicle" style="background-color: #854949;" onclick="click()"> 5 </div>
+        <div class="cicle" style="background-color: #ffffff;" onclick="click()"> 6 </div>
+        <div class="cicle" style="background-color: #000000;" onclick="click()"> 7 </div>
+        <div class="cicle" style="background-color: #8afd06;" onclick="click()"> 8 </div>
+        <div class="cicle" style="background-color: #edfd06;" onclick="click()"> 9 </div>
+        <div class="cicle" style="background-color: #b67c11;" onclick="click()"> 10 </div>
+        
     </main>
 
     <footer>
