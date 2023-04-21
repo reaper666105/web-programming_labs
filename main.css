@@ -20,6 +20,10 @@ header:hover {
     font-size: 30pt;
 }
 
+main {
+    margin: 10px 20px;
+}
+
 footer {
     background-color: black;
     color: lightgreen;

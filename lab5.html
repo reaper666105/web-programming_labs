@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Григорови Юшков. Лабораторная 5</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a + b;
+            alert('Сумма '+ a + ' и ' + b + ' равна ' + result);
+        }
+
+        function showDiff() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность '+ a + 'и' + b + ' равна ' + result)
+        }
+
+        function showAuthor() {
+            let author = 'Авторы страницы:\nЮшков и Григорович';
+            alert(author);
+        }
+
+        function changeOutput(buttonNum, backColor, textColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor
+            output.style.color = textColor;   
+        }
+
+        function showTotal() {
+            let inputA = document.getElementById('numbA');
+            let inputB = document.getElementById('numbB');
+            let inputC = document.getElementById('numbC');
+            let inputD = document.getElementById('numbD');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+
+            let result = (a*100 + b*80 + c*150 + d*300);
+
+            let q = document.getElementById('output2')
+            q.innerHTML =  'Итого: ' + result 
+        }
+        
+        function click(visibility) {
+            let q = document.getElementById('q');
+            q.style.visibility = visibility;
+            
+        }
+
+
+    </script>
+
+    <style>
+        .message {
+            cursor: pointer;
+            background-color: bisque;
+            width: 180px;
+            height: 40px;
+            border: 2px solid #fd0606;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+
+        }
+
+        #output2 {
+            border: 1px solid;
+            width: 250px;
+            height: 40px;
+        }
+        
+        .basket {
+            background-color: aqua;
+            border: 1px solid;
+            width: 250px;
+            height: 400px;
+        }
+
+        .cicle {
+            width: 50px; 
+            height: 50px; 
+            border: 2px solid;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            
+        }
+
+        #q {
+            background-color: #fd0606;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header style = "cursor: pointer;" onclick="showAuthor()"> 
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <lable>первое число: <input type="number" value="5154" id="numberA"></lable><br>
+        <lable>второе число: <input type="number" value="7891" id="numberB"></lable><br>
+        <div class="message" onclick="showSum()">
+            Найти  сумму чисел
+        </div>
+
+        <div class="message" onclick="showDiff()">
+            Найти раность
+        </div>
+
+        <div class="message" onclick="showAuthor()">
+            Узнать, кто авторы страницы
+        </div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'pink', 'green')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'gray', 'black')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'black', 'white')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'purple', 'yellow')">
+        </div>
+
+        <div id="output"></div>
+
+        <div class="basket">
+            <div style="font-size: 20px; font-weight: 10px; margin: 10px; margin-left: 45px;">Корзина товаров</div>
+            <div>Яблоки(100р/шт):</div>
+            <div><input type="number" value="0" id="numbA"></div>
+            <div>Груши(80р/шт)</div>
+            <div><input type="number" value="0" id="numbB"></div>
+            <div>Апельсины(150р/шт)</div>
+            <div><input type="number" value="0" id="numbC"></div>
+            <div>Дыни(300р/шт)</div>
+            <div><input type="number" value="0" id="numbD"></div>
+            <input type="button" value="Рассчитать" onclick=showTotal() >
+            <div id='output2'> Итого: </div>
+        </div>
+        
+        <div class="cicle" id="q" onclick="click('collapse')"> 1 </div>
+        <div class="cicle" style="background-color: #06d8fd;" onclick="click()"> 2 </div>
+        <div class="cicle" style="background-color: #06fd75;" onclick="click()"> 3 </div>
+        <div class="cicle" style="background-color: #fd06f1;" onclick="click()"> 4 </div>
+        <div class="cicle" style="background-color: #854949;" onclick="click()"> 5 </div>
+        <div class="cicle" style="background-color: #ffffff;" onclick="click()"> 6 </div>
+        <div class="cicle" style="background-color: #000000;" onclick="click()"> 7 </div>
+        <div class="cicle" style="background-color: #8afd06;" onclick="click()"> 8 </div>
+        <div class="cicle" style="background-color: #edfd06;" onclick="click()"> 9 </div>
+        <div class="cicle" style="background-color: #b67c11;" onclick="click()"> 10 </div>
+        
+    </main>
+
+    <footer>
+        &copy; Юшков Григорови, ФБИ-11, 2 курс, 2023
+    </footer>
+</body>
+</html>
