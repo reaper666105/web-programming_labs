@@ -39,7 +39,7 @@ a {
     text-decoration: none;
     target="_blank";
     text-shadow: 5px 5px 1px gray;
-    transition: 3s 3s;
+    transition: 4s 0s;
 }
 
 a:visited {
