@@ -58,6 +58,10 @@
 
 
         }
+        function hideRules() {
+            let screens = document.getElementsByClassName(rules);
+            screens=''
+        }
     </script>
 </head>
 <body>
@@ -67,6 +71,10 @@
             <button onclick="startGame()">
                 Сыграть в игру
             </button>
+        </div>
+
+        <div class="rules">
+            <button onclick=""> Показать правила игры</button>
         </div>
             
         <div class="game" style="display: none;">
