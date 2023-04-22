@@ -63,7 +63,20 @@
         function chpok(something){
             something.style.opacity=0;
         }
-            
+        
+        function maximum(a,b,c) {
+            return Math.max(a,b,c)
+        }
+        function progrression(a,d,n) {
+            let x=''
+            for (let i=0; i<n; i++) {
+                x += a + d * (n-i)
+                x +=', '
+    
+            }
+            alert (x)
+    }
+</script>
 
 
     </script>
@@ -173,6 +186,7 @@
         <div class="cicle" style="background-color: #8afd06;" onclick="chpok(this)"> 8 </div>
         <div class="cicle" style="background-color: #edfd06;" onclick="chpok(this)"> 9 </div>
         <div class="cicle" style="background-color: #b67c11;" onclick="chpok(this)"> 10 </div>
+        <div onclick="progrression(1,2,10)">Что-то</div>
     </main>
 
     <footer>
