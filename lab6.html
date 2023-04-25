@@ -16,6 +16,9 @@
             padding: 10px;
             width: 400px;
         }
+        .rules {
+            margin: 5px;
+        }
     </style>
     <script>
         let number;
@@ -58,9 +61,15 @@
 
 
         }
-        function hideRules() {
-            let screens = document.getElementsByClassName(rules);
-            screens=''
+        function show_rules() {
+            let screens = document.getElementsByClassName('rules');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+        function hide_rules() {
+            let screens = document.getElementsByClassName('rules');
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
         }
     </script>
 </head>
@@ -74,7 +83,18 @@
         </div>
 
         <div class="rules">
-            <button onclick=""> Показать правила игры</button>
+            <button onclick="show_rules()">
+                 Показать правила игры
+            </button>
+        </div>
+
+        <div class="rules" style="display: none">
+            <div>
+                <button onclick="hide_rules()"> Скрыть правила игры</button>
+                <div>Правило одно:<br>
+                    Никаких правил!!!
+                </div>
+            </div>
         </div>
             
         <div class="game" style="display: none;">
